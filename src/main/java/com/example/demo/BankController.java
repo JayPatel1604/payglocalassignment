@@ -22,7 +22,10 @@ public class BankController {
 	
 	@RequestMapping(value="/")
 	public String index() throws FileNotFoundException{
-		Scanner scanner = new Scanner(new FileReader("C:\\Users\\Jay K Patel\\Desktop\\PayGlocal\\PayGlocal-Assignment\\src\\main\\resources\\bin.csv"));
+		
+		Scanner scanner = new Scanner(new FileReader("https://github.com/JayPatel1604/payglocalassignment/blob/main/src/main/resources/bin.csv"));
+		
+		//Scanner scanner = new Scanner(new FileReader("C:\\Users\\Jay K Patel\\Desktop\\PayGlocal\\PayGlocal-Assignment\\src\\main\\resources\\bin.csv"));
 		while (scanner.hasNext()) {
 			
 			String inputs[] = scanner.nextLine().split(";",-1);
