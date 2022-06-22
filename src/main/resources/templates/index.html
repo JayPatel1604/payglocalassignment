@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Bank User Details</title>
+</head>
+<body>
+<div align="center">
+    <h1>Enter the BIN from the csv file shared to retrieve the stored information</h1>
+    
+    <form method="POST" onSubmit="myFunction()" id="my_form">
+    <input type="text" name="binNo"> 
+    <input type=submit>
+    </form>
+    
+</div>   
+
+<script>
+function myFunction(){
+    var action_src = "http://localhost:8080/" + document.getElementsByName("binNo")[0].value;
+    var my_form = document.getElementById('my_form');
+    my_form.action = action_src ;
+}
+
+</script> 
+</body>
+</html>
